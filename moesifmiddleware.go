@@ -66,7 +66,7 @@ func (rec *moesifResponseRecorder) Header() http.Header{
 	return rec.rw.Header()
 }
 
-func moesifMiddleware(next http.Handler, moesifOption map[interface{}]string) http.Handler {
+func MoesifMiddleware(next http.Handler, moesifOption map[interface{}]string) http.Handler {
 	return http.HandlerFunc(func(rw http.ResponseWriter, request *http.Request) {
 
 		var buf bytes.Buffer
